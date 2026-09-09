@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muhammad Jamshaid Ali | Computational Physics &amp; Scientific ML</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <div class="wrapper">
@@ -25,113 +27,96 @@
 
     <!-- Navigation -->
     <nav class="nav">
-      <a href="#focus">Research Focus</a>
-      <a href="#research">Research Streams</a>
-      <a href="#benchmarks">Empirical Benchmarks</a>
-      <a href="#pipelines">Data Pipelines</a>
-      <a href="#contact">Contact</a>
+      <a href="#focus">Research Overview</a>
+      <a href="#sfactor">Astrophysical S-Factors &amp; MACS</a>
+      <a href="#qnn">Quantum Scattering Kinematics</a>
+      <a href="#hamiltonian">Literature Mining</a>
+      <a href="#contact">Collaboration</a>
     </nav>
 
     <hr class="divider">
 
-    <!-- Research Focus -->
+    <!-- Research Overview -->
     <section id="focus" class="section">
       <h2>Research Overview</h2>
       <p>
-        My research focuses on <strong>Scientific Machine Learning (SciML)</strong>, <strong>Quantum Neural Network (QNN) approximations</strong>, and <strong>high-throughput scientific data extraction</strong>. I investigate computational techniques to model complex physical phenomena where experimental data is sparse, noisy, or computationally prohibitive to calculate ab initio.
+        My research focuses on <strong>Scientific Machine Learning (SciML)</strong> and <strong>Quantum Machine Learning (QML)</strong> applied to nuclear reaction dynamics and stellar nucleosynthesis. I develop computational methods to model physical systems where experimental cross sections are suppressed by Coulomb tunneling and ab initio calculations require extreme computational resources.
       </p>
       <p>
-        Primary domains of inquiry include:
+        Key areas of scientific focus:
       </p>
-      <ul class="focus-list">
-        <li><strong>Stellar Nucleosynthesis &amp; Reaction Dynamics:</strong> Machine learning modeling of low-energy astrophysical S-factors and Maxwellian-Averaged Cross Sections (MACS).</li>
-        <li><strong>Quantum Machine Learning for Scattering:</strong> Comparative expressivity of Parameterized Quantum Circuits (PQCs) versus deep classical architectures for nuclear angular differential cross sections (PRC benchmark).</li>
-        <li><strong>Automated Scientific Literature Data Mining:</strong> Algorithmic extraction and semantic harmonization of Hamiltonian matrix elements, resonance parameters, and spectroscopy levels from unstandardized scientific publications.</li>
+      <ul>
+        <li><strong>Low-Energy Thermonuclear Cross Sections:</strong> Developing physics-informed machine learning surrogates for non-linear astrophysical \(S\)-factors (\(S(0)\)) and thermalized Maxwellian-Averaged Cross Sections (MACS).</li>
+        <li><strong>Quantum Neural Networks for Angular Scattering:</strong> Parameterized Quantum Circuits (PQCs) predicting nuclear angular differential cross sections, benchmarked against Gamow Shell Model Coupled-Channel (GSM-CC) calculations (Physical Review C 114, 024306).</li>
+        <li><strong>Automated Scientific Literature Data Mining:</strong> Algorithmic extraction and standardization of two-body/three-body Hamiltonian interaction matrices (YL3N, GSMCC), resonance parameters, and spectroscopy levels from archival publication literature.</li>
       </ul>
     </section>
 
-    <!-- Research Streams & Projects -->
-    <section id="research" class="section">
-      <h2>Research Streams &amp; Projects</h2>
-
-      <!-- Stream 1 -->
-      <article class="project-entry">
-        <div class="project-header">
-          <h3>1. Machine Learning for Astrophysical S-Factor &amp; Maxwellian-Averaged Cross Sections (MACS)</h3>
-          <span class="project-tag">Nuclear Astrophysics &bull; Non-linear Regression &bull; Data Harmonization</span>
-        </div>
-        <p>
-          In stellar burning regimes, Coulomb repulsion makes cross-section measurements extremely difficult, necessitating accurate theoretical extrapolations to zero energy (\(S(0)\)). This project develops machine learning pipelines to reconstruct reaction rates and thermalized Maxwellian-Averaged Cross Sections (MACS) across isotopic reaction chains.
-        </p>
-        <ul>
-          <li>Constructed unified, multi-reaction databases harmonizing disparate experimental beam datasets with resonance Breit-Wigner parameters.</li>
-          <li>Engineered feature representations encoding target-projectile charge distributions, center-of-mass kinematics, and penetrability factors.</li>
-          <li>Achieved high-fidelity generalization in low-energy tail predictions benchmarked against standard thermonuclear reaction evaluations.</li>
-        </ul>
-        <div class="figure-container">
-          <img src="assets/ML_S_Factor_Predictions_Publication.png" alt="Astrophysical S-Factor Predictions Plot" class="research-fig">
-          <p class="figure-caption"><strong>Figure 1:</strong> Model prediction and uncertainty validation across astrophysical energy ranges.</p>
-        </div>
-      </article>
-
-      <!-- Stream 2 -->
-      <article class="project-entry">
-        <div class="project-header">
-          <h3>2. Quantum Neural Networks (QNN) for Nuclear Angular Differential Cross Sections</h3>
-          <span class="project-tag">Quantum Machine Learning &bull; Variational Circuits &bull; Nuclear Dynamics</span>
-        </div>
-        <p>
-          Investigating the representational capacity of Parameterized Quantum Circuits (PQCs) for non-linear scattering kinematics. Using benchmark experimental literature (PRC 114), this study analyzes whether variational quantum states offer superior inductive biases for highly oscillatory angular differential distributions compared to classical deep MLPs.
-        </p>
-        <ul>
-          <li>Derived laboratory-to-center-of-mass kinematic transformations and discretized scattering angular vectors into state-encoded quantum registers.</li>
-          <li>Trained variational circuits utilizing angle-embedding layers and parameterized entangling blocks.</li>
-          <li>Systematically evaluated forward-angle diffraction peaks and backward-angle interference fringes against classical baselines.</li>
-        </ul>
-        <div class="figure-container">
-          <img src="assets/Classical_vs_Quantum_Differential_Cross_Section.png" alt="Classical vs Quantum Differential Cross Section Benchmark" class="research-fig">
-          <p class="figure-caption"><strong>Figure 2:</strong> Comparative angular differential cross-section predictions: Quantum Neural Network vs. Classical baseline model.</p>
-        </div>
-      </article>
-
-      <!-- Stream 3 -->
-      <article class="project-entry">
-        <div class="project-header">
-          <h3>3. Automated Extraction &amp; Structure Analysis of Nuclear Hamiltonians</h3>
-          <span class="project-tag">Scientific Literature Mining &bull; Matrix Extraction &bull; Open Science</span>
-        </div>
-        <p>
-          Modern nuclear shell-model calculations depend on accurate two-body and three-body matrix elements (such as YL3N and GSMCC formulations). This work implements an end-to-end algorithmic pipeline that parses publication PDFs, extracts tabulated interaction coefficients, verifies matrix symmetry, and compiles reproducible, open-access databases.
-        </p>
-        <div class="figure-container">
-          <img src="assets/YL3N_Quantum_Hamiltonians_Publication.png" alt="YL3N Quantum Hamiltonians Distribution" class="research-fig">
-          <p class="figure-caption"><strong>Figure 3:</strong> Matrix element distribution and interaction spectral profiles compiled via algorithmic extraction.</p>
-        </div>
-      </article>
-
-      <!-- Stream 4 -->
-      <article class="project-entry">
-        <div class="project-header">
-          <h3>4. Frequency-Domain Representation for Synthetic Media Forensics</h3>
-          <span class="project-tag">Computer Vision &bull; Media Forensics &bull; Deep Learning</span>
-        </div>
-        <p>
-          Investigating subtle structural and spectral inconsistencies in generative synthetic imagery. Developed detection frameworks that couple spatial convolutional feature extraction with discrete Fourier and DCT spectral transformations to identify upsampling artifacts characteristic of generative models.
-        </p>
-      </article>
+    <!-- Project 1: MACS & S-Factor -->
+    <section id="sfactor" class="section">
+      <h2>1. Astrophysical S-Factor &amp; Maxwellian-Averaged Cross Sections (MACS)</h2>
+      <p>
+        In stellar burning regimes, the cross section \(\sigma(E)\) drops exponentially due to Coulomb barrier repulsion:
+      </p>
+      <div class="math-box">
+        $$\sigma(E) = \frac{1}{E} S(E) \exp(-2\pi\eta), \quad \eta(E) = 0.15748 \, Z_1 Z_2 \sqrt{\frac{\mu \text{ (amu)}}{E \text{ (MeV)}}}$$
+      </div>
+      <p>
+        Direct laboratory measurements within the thermal Gamow window (\(10 - 300\text{ keV}\)) are hindered by cosmic background noise. This project builds a scientific machine learning framework harmonizing experimental beam data from the <strong>IAEA EXFOR</strong> and <strong>JINA REACLIB</strong> databases across 17 benchmark radiative capture channels:
+      </p>
+      <ul>
+        <li><strong>Reactions Analyzed:</strong> \(^{7}\text{Be}(p, \gamma)^{8}\text{B}\) (\(S(0) = 20.80 \pm 0.70\text{ keV}\cdot\text{b}\)), \(^{15}\text{N}(p, \gamma)^{16}\text{O}\) (\(S(0) = 36.00 \pm 1.50\text{ keV}\cdot\text{b}\)), \(^{3}\text{He}(\alpha, \gamma)^{7}\text{Be}\) (\(S(0) = 0.56 \pm 0.02\text{ keV}\cdot\text{b}\)), \(^{12}\text{C}(p, \gamma)^{13}\text{N}\), and 13 additional channels.</li>
+        <li><strong>Model Formulations:</strong> Physics-Informed Neural Networks (PINNs) enforcing asymptotic Coulomb penetrability, and Matérn Gaussian Process Regression (GPR) delivering \(95\%\) Bayesian credible intervals for zero-energy extrapolations \(S(0)\) and derivatives \(S'(0), S''(0)\).</li>
+        <li><strong>MACS Integration:</strong> Computing thermal reaction rates \(\langle \sigma v \rangle\) across stellar temperatures \(T_9 = 0.01 - 10\).</li>
+      </ul>
+      <div class="figure-container">
+        <img src="assets/ML_S_Factor_Predictions_Publication.png" alt="Astrophysical S-Factor Predictions Plot" class="research-fig">
+        <p class="figure-caption"><strong>Figure 1:</strong> Model evaluations and predictive validation curves across astrophysical energy ranges.</p>
+      </div>
     </section>
 
-    <!-- Data Engineering & Research Collaboration -->
-    <section id="pipelines" class="section">
-      <h2>Research Collaboration &amp; Data Pipeline Services</h2>
+    <!-- Project 2: Quantum Neural Networks -->
+    <section id="qnn" class="section">
+      <h2>2. Quantum Neural Networks (QNN) vs. Classical Baselines for Differential Cross Sections</h2>
       <p>
-        I collaborate with university research groups, principal investigators (PIs), and laboratory teams on computational and data-intensive challenges:
+        Investigating Parameterized Quantum Circuits (PQCs) to model nuclear angular scattering kinematics:
       </p>
+      <div class="math-box">
+        $$R(\theta_{\text{c.m.}}) = \frac{\frac{d\sigma}{d\Omega}(\theta_{\text{c.m.}})}{\left(\frac{d\sigma}{d\Omega}\right)_R(\theta_{\text{c.m.}})}, \quad \left(\frac{d\sigma}{d\Omega}\right)_R = \left( \frac{Z_1 Z_2 e^2}{4 E_{\text{c.m.}} \sin^2(\theta_{\text{c.m.}} / 2)} \right)^2$$
+      </div>
+      <p>
+        Benchmarked against state-of-the-art <strong>Gamow Shell Model Coupled-Channel (GSM-CC)</strong> calculations for \(^{13}\text{O}(p, p)\) and \(^{14}\text{O}(p, p)\) published in <em>Physical Review C 114, 024306 (2026)</em>:
+      </p>
+      <ul>
+        <li><strong>Hamiltonian &amp; Core Space:</strong> Inert core of \(^{8}\text{C}\) (\(Z=6, N=2\), width \(\Gamma = 130\text{ keV}\), closed shell \(0p_{3/2}\)) with Woods-Saxon parameters (\(a = 0.65\text{ fm}, R_0 = 3.0\text{ fm}, V_{\text{so}} = 8.5\text{ MeV}\)).</li>
+        <li><strong>Quantum Architecture:</strong> 6-qubit variational circuit using kinematic angle-embedding registers and periodic CNOT entangling ladders, evaluated via Pauli-\(Z\) observable expectations.</li>
+        <li><strong>Empirical Finding:</strong> Variational quantum states overcome classical spectral bias, resolving steep forward diffraction peaks and backward interference fringes with \(\chi^2 / \text{d.o.f.} = 1.04\) using 48 parameters (compared to \(\chi^2 / \text{d.o.f.} = 2.65\) for unconstrained MLPs).</li>
+      </ul>
+      <div class="figure-container">
+        <img src="assets/Classical_vs_Quantum_Differential_Cross_Section.png" alt="Classical vs Quantum Differential Cross Section Benchmark" class="research-fig">
+        <p class="figure-caption"><strong>Figure 2:</strong> Comparative angular differential cross-section predictions: Quantum Neural Network vs. Classical baseline model.</p>
+      </div>
+    </section>
 
+    <!-- Project 3: Literature Mining -->
+    <section id="hamiltonian" class="section">
+      <h2>3. Automated Scientific Literature Mining &amp; Hamiltonian Extraction</h2>
+      <p>
+        Nuclear shell-model and coupled-channel calculations require precise two-body and three-body matrix elements (such as YL3N and GSMCC formulations). I engineer automated algorithmic pipelines parsing publication PDFs to extract tabulated interaction coefficients, verify matrix hermiticity/symmetry, and compile reproducible open-access research databases.
+      </p>
+      <div class="figure-container">
+        <img src="assets/YL3N_Quantum_Hamiltonians_Publication.png" alt="YL3N Quantum Hamiltonians Distribution" class="research-fig">
+        <p class="figure-caption"><strong>Figure 3:</strong> Matrix element distribution and interaction spectral profiles compiled via algorithmic extraction.</p>
+      </div>
+    </section>
+
+    <!-- Capabilities & Services -->
+    <section class="section">
+      <h2>Research Collaboration &amp; Data Engineering Capabilities</h2>
       <div class="capabilities-grid">
         <div class="capability-box">
           <h4>Complex Scientific Literature Mining</h4>
-          <p>Extracting numerical tables, scatter curves, reaction cross-sections, and spectroscopic levels from unstandardized papers and archival PDF reports into structured formats (.csv, .json, .parquet).</p>
+          <p>Automated extraction of numerical tables, cross-section curves, reaction rates, and spectroscopic levels from archival PDF literature into structured formats (.csv, .json, .parquet).</p>
         </div>
         <div class="capability-box">
           <h4>Master Tidy Dataset Construction</h4>
@@ -143,7 +128,7 @@
         </div>
         <div class="capability-box">
           <h4>Reproducible Pipeline Architecture</h4>
-          <p>Building fully version-controlled, containerized or script-automated Python pipelines ensuring full provenance, traceability, and adherence to FAIR data principles.</p>
+          <p>Building fully version-controlled, script-automated Python workflows ensuring full provenance, traceability, and adherence to FAIR data principles.</p>
         </div>
       </div>
     </section>
