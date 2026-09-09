@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Jamshaid Ali | Computational Physics &amp; Scientific ML</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="name">Muhammad Jamshaid Ali</h1>
+      <p class="title">Computational Physics &amp; Scientific Machine Learning (SciML) Researcher</p>
+      <div class="contact-links">
+        <a href="mailto:jamshaid8081@gmail.com">jamshaid8081@gmail.com</a>
+        <span class="sep">&bull;</span>
+        <a href="https://github.com/jamshaidal" target="_blank" rel="noopener">GitHub: @jamshaidal</a>
+        <span class="sep">&bull;</span>
+        <a href="https://www.linkedin.com/in/muhammad-jamshaid-ali-1687082a0/" target="_blank" rel="noopener">LinkedIn</a>
+        <span class="sep">&bull;</span>
+        <span>Islamabad, Pakistan</span>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <a href="#focus">Research Focus</a>
+      <a href="#research">Research Streams</a>
+      <a href="#benchmarks">Empirical Benchmarks</a>
+      <a href="#pipelines">Data Pipelines</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <hr class="divider">
+
+    <!-- Research Focus -->
+    <section id="focus" class="section">
+      <h2>Research Overview</h2>
+      <p>
+        My research focuses on <strong>Scientific Machine Learning (SciML)</strong>, <strong>Quantum Neural Network (QNN) approximations</strong>, and <strong>high-throughput scientific data extraction</strong>. I investigate computational techniques to model complex physical phenomena where experimental data is sparse, noisy, or computationally prohibitive to calculate ab initio.
+      </p>
+      <p>
+        Primary domains of inquiry include:
+      </p>
+      <ul class="focus-list">
+        <li><strong>Stellar Nucleosynthesis &amp; Reaction Dynamics:</strong> Machine learning modeling of low-energy astrophysical S-factors and Maxwellian-Averaged Cross Sections (MACS).</li>
+        <li><strong>Quantum Machine Learning for Scattering:</strong> Comparative expressivity of Parameterized Quantum Circuits (PQCs) versus deep classical architectures for nuclear angular differential cross sections (PRC benchmark).</li>
+        <li><strong>Automated Scientific Literature Data Mining:</strong> Algorithmic extraction and semantic harmonization of Hamiltonian matrix elements, resonance parameters, and spectroscopy levels from unstandardized scientific publications.</li>
+      </ul>
+    </section>
+
+    <!-- Research Streams & Projects -->
+    <section id="research" class="section">
+      <h2>Research Streams &amp; Projects</h2>
+
+      <!-- Stream 1 -->
+      <article class="project-entry">
+        <div class="project-header">
+          <h3>1. Machine Learning for Astrophysical S-Factor &amp; Maxwellian-Averaged Cross Sections (MACS)</h3>
+          <span class="project-tag">Nuclear Astrophysics &bull; Non-linear Regression &bull; Data Harmonization</span>
+        </div>
+        <p>
+          In stellar burning regimes, Coulomb repulsion makes cross-section measurements extremely difficult, necessitating accurate theoretical extrapolations to zero energy (\(S(0)\)). This project develops machine learning pipelines to reconstruct reaction rates and thermalized Maxwellian-Averaged Cross Sections (MACS) across isotopic reaction chains.
+        </p>
+        <ul>
+          <li>Constructed unified, multi-reaction databases harmonizing disparate experimental beam datasets with resonance Breit-Wigner parameters.</li>
+          <li>Engineered feature representations encoding target-projectile charge distributions, center-of-mass kinematics, and penetrability factors.</li>
+          <li>Achieved high-fidelity generalization in low-energy tail predictions benchmarked against standard thermonuclear reaction evaluations.</li>
+        </ul>
+        <div class="figure-container">
+          <img src="assets/ML_S_Factor_Predictions_Publication.png" alt="Astrophysical S-Factor Predictions Plot" class="research-fig">
+          <p class="figure-caption"><strong>Figure 1:</strong> Model prediction and uncertainty validation across astrophysical energy ranges.</p>
+        </div>
+      </article>
+
+      <!-- Stream 2 -->
+      <article class="project-entry">
+        <div class="project-header">
+          <h3>2. Quantum Neural Networks (QNN) for Nuclear Angular Differential Cross Sections</h3>
+          <span class="project-tag">Quantum Machine Learning &bull; Variational Circuits &bull; Nuclear Dynamics</span>
+        </div>
+        <p>
+          Investigating the representational capacity of Parameterized Quantum Circuits (PQCs) for non-linear scattering kinematics. Using benchmark experimental literature (PRC 114), this study analyzes whether variational quantum states offer superior inductive biases for highly oscillatory angular differential distributions compared to classical deep MLPs.
+        </p>
+        <ul>
+          <li>Derived laboratory-to-center-of-mass kinematic transformations and discretized scattering angular vectors into state-encoded quantum registers.</li>
+          <li>Trained variational circuits utilizing angle-embedding layers and parameterized entangling blocks.</li>
+          <li>Systematically evaluated forward-angle diffraction peaks and backward-angle interference fringes against classical baselines.</li>
+        </ul>
+        <div class="figure-container">
+          <img src="assets/Classical_vs_Quantum_Differential_Cross_Section.png" alt="Classical vs Quantum Differential Cross Section Benchmark" class="research-fig">
+          <p class="figure-caption"><strong>Figure 2:</strong> Comparative angular differential cross-section predictions: Quantum Neural Network vs. Classical baseline model.</p>
+        </div>
+      </article>
+
+      <!-- Stream 3 -->
+      <article class="project-entry">
+        <div class="project-header">
+          <h3>3. Automated Extraction &amp; Structure Analysis of Nuclear Hamiltonians</h3>
+          <span class="project-tag">Scientific Literature Mining &bull; Matrix Extraction &bull; Open Science</span>
+        </div>
+        <p>
+          Modern nuclear shell-model calculations depend on accurate two-body and three-body matrix elements (such as YL3N and GSMCC formulations). This work implements an end-to-end algorithmic pipeline that parses publication PDFs, extracts tabulated interaction coefficients, verifies matrix symmetry, and compiles reproducible, open-access databases.
+        </p>
+        <div class="figure-container">
+          <img src="assets/YL3N_Quantum_Hamiltonians_Publication.png" alt="YL3N Quantum Hamiltonians Distribution" class="research-fig">
+          <p class="figure-caption"><strong>Figure 3:</strong> Matrix element distribution and interaction spectral profiles compiled via algorithmic extraction.</p>
+        </div>
+      </article>
+
+      <!-- Stream 4 -->
+      <article class="project-entry">
+        <div class="project-header">
+          <h3>4. Frequency-Domain Representation for Synthetic Media Forensics</h3>
+          <span class="project-tag">Computer Vision &bull; Media Forensics &bull; Deep Learning</span>
+        </div>
+        <p>
+          Investigating subtle structural and spectral inconsistencies in generative synthetic imagery. Developed detection frameworks that couple spatial convolutional feature extraction with discrete Fourier and DCT spectral transformations to identify upsampling artifacts characteristic of generative models.
+        </p>
+      </article>
+    </section>
+
+    <!-- Data Engineering & Research Collaboration -->
+    <section id="pipelines" class="section">
+      <h2>Research Collaboration &amp; Data Pipeline Services</h2>
+      <p>
+        I collaborate with university research groups, principal investigators (PIs), and laboratory teams on computational and data-intensive challenges:
+      </p>
+
+      <div class="capabilities-grid">
+        <div class="capability-box">
+          <h4>Complex Scientific Literature Mining</h4>
+          <p>Extracting numerical tables, scatter curves, reaction cross-sections, and spectroscopic levels from unstandardized papers and archival PDF reports into structured formats (.csv, .json, .parquet).</p>
+        </div>
+        <div class="capability-box">
+          <h4>Master Tidy Dataset Construction</h4>
+          <p>Deduplicating multi-source experimental corpora, standardizing physical units, reconciling isotope identifiers, and validating data integrity with automated checks.</p>
+        </div>
+        <div class="capability-box">
+          <h4>Scientific ML Modeling &amp; Benchmarking</h4>
+          <p>Formulating regression, classification, and neural surrogate models for physical simulations with rigorous cross-validation and publication-standard visualization.</p>
+        </div>
+        <div class="capability-box">
+          <h4>Reproducible Pipeline Architecture</h4>
+          <p>Building fully version-controlled, containerized or script-automated Python pipelines ensuring full provenance, traceability, and adherence to FAIR data principles.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Collaboration -->
+    <section id="contact" class="section">
+      <h2>Contact &amp; Engagement</h2>
+      <p>
+        Open to research collaborations, visiting researcher roles, grant-funded computational data projects, and technical consultations with academic institutions and labs worldwide:
+      </p>
+      <div class="contact-box">
+        <p><strong>Email:</strong> <a href="mailto:jamshaid8081@gmail.com">jamshaid8081@gmail.com</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/jamshaidal" target="_blank" rel="noopener">github.com/jamshaidal</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/muhammad-jamshaid-ali-1687082a0/" target="_blank" rel="noopener">linkedin.com/in/muhammad-jamshaid-ali-1687082a0</a></p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; Muhammad Jamshaid Ali &bull; Computational Physics &amp; Scientific ML</p>
+    </footer>
+  </div>
+</body>
+</html>
