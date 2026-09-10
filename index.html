@@ -10,265 +10,347 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-  <div class="wrapper">
-    <!-- Header -->
-    <header class="header">
-      <h1 class="name">Muhammad Jamshaid Ali</h1>
-      <p class="title">Computational Physics &amp; Scientific Machine Learning (SciML) Researcher</p>
-      <div class="contact-links">
-        <a href="mailto:jamshaid8081@gmail.com">jamshaid8081@gmail.com</a>
-        <span class="sep">&bull;</span>
-        <a href="https://github.com/jamshaidal" target="_blank" rel="noopener">GitHub: @jamshaidal</a>
-        <span class="sep">&bull;</span>
-        <a href="https://www.linkedin.com/in/muhammad-jamshaid-ali-1687082a0/" target="_blank" rel="noopener">LinkedIn Profile</a>
+
+  <!-- Top Sticky Navigation Bar -->
+  <nav class="top-nav-bar">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">
+        Muhammad Jamshaid Ali
+        <span class="brand-badge">SciML &bull; Physics</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Research Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#stack">Technical Stack</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/jamshaidal" target="_blank" rel="noopener" class="nav-cta">GitHub Profile</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Wrapper -->
+  <main class="wrapper">
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-header">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span>&bull;</span> Scientific Machine Learning &bull; Quantum Dynamics &bull; Physics-Informed AI
+          </div>
+          <h1 class="hero-title">Muhammad Jamshaid Ali</h1>
+          <p class="hero-subtitle">Computational Physics &amp; Scientific Machine Learning (SciML) Researcher</p>
+          <p class="hero-bio">
+            I develop physics-constrained neural surrogates, parameterized quantum circuits, and automated literature extraction pipelines for continuum-coupled nuclear dynamics and sub-Coulomb thermonuclear reactions. My research bridges theoretical physics invariants—such as Coulomb tunneling asymptotics, Sommerfeld parameters, and conservation laws—with data-driven computational methods.
+          </p>
+          <div class="contact-bar">
+            <span class="contact-item">Email: <a href="mailto:jamshaid8081@gmail.com">jamshaid8081@gmail.com</a></span>
+            <span class="sep">&bull;</span>
+            <span class="contact-item">GitHub: <a href="https://github.com/jamshaidal" target="_blank" rel="noopener">@jamshaidal</a></span>
+            <span class="sep">&bull;</span>
+            <span class="contact-item">LinkedIn: <a href="https://www.linkedin.com/in/muhammad-jamshaid-ali-1687082a0/" target="_blank" rel="noopener">Profile</a></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Research Metric Highlights -->
+      <div class="hero-highlights">
+        <div class="highlight-item">
+          <div class="highlight-val">17 Channels</div>
+          <div class="highlight-label">Standardized Thermonuclear Reaction Corpus</div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-val">48 Params</div>
+          <div class="highlight-label">Quantum Angle-Embedding Circuit vs. 10&#8308; MLP</div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-val">100% Verified</div>
+          <div class="highlight-label">Automated Multi-Platform Reproducibility CI</div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-val">PRC 114</div>
+          <div class="highlight-label">Physical Review C 114, 024306 Benchmark</div>
+        </div>
       </div>
     </header>
 
-    <!-- Navigation -->
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#projects">Research Projects</a>
-      <a href="#achievements">Personal Achievements</a>
-      <a href="#stack">Technical Stack</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <hr class="divider">
-
-    <!-- About Section -->
+    <!-- About & Methodological Foundation -->
     <section id="about" class="section">
-      <h2>About &amp; Research Focus</h2>
+      <div class="section-header">
+        <h2 class="section-title">Methodological Focus &amp; Scientific Scope</h2>
+        <p class="section-desc">Coupling physical conservation laws with high-performance numerical computing</p>
+      </div>
       <p>
-        I am a computational researcher specializing in <strong>Scientific Machine Learning (SciML)</strong>, <strong>Physics-Informed Neural Networks (PINNs)</strong>, and <strong>Quantum Neural Networks (QNNs)</strong> applied to nuclear reaction dynamics and stellar nucleosynthesis.
+        In physical regimes where experimental cross sections are suppressed by many orders of magnitude due to quantum tunneling (such as stellar nucleosynthesis in the Gamow window) or where open quantum scattering requires extensive continuum truncation, unconstrained deep neural networks fail due to high gradient variance and spectral bias.
       </p>
       <p>
-        My research focuses on formulating mathematically rigorous machine learning surrogates for physical regimes where experimental cross sections are strongly suppressed by Coulomb tunneling or where numerical simulations of continuum-coupled quantum systems require intensive computational resources. By embedding known physical invariants—such as Coulomb asymptotics, Sommerfeld parameters, and conservation laws—directly into learning objectives, my work bridges theoretical physics benchmarks with data-driven modeling.
+        My computational work addresses these limitations across three core methodological pillars:
       </p>
+      <ul>
+        <li><strong>Asymptotic Invariance &amp; Domain Transformation:</strong> Transforming exponential cross sections into the smooth astrophysical \(S\)-factor representation \(S(E) = E \sigma(E) \exp(2\pi\eta)\) to enforce physical boundary limits as \(E \to 0\).</li>
+        <li><strong>Quantum Inductive Bias:</strong> Leveraging Parameterized Quantum Circuits (PQCs) with entangling CNOT ladders and angle-embedding registers to fit high-frequency Coulomb-nuclear interference oscillations with extreme parameter efficiency.</li>
+        <li><strong>Multi-Objective Physics Residuals:</strong> Implementing automated derivative tracking via PyTorch autograd to enforce partial differential equation residuals directly within the loss function for forward and inverse boundary-value problems.</li>
+      </ul>
       <p>
-        All research projects documented here are grounded in publicly accessible, peer-reviewed benchmarks (including <em>Physical Review C</em> and the international IAEA EXFOR database) and adhere to strict open-science reproducibility standards.
+        All datasets and formulations presented are strictly derived from open, peer-reviewed literature and international scientific databases (IAEA EXFOR, JINA REACLIB), ensuring full scientific safety and reproducibility.
       </p>
     </section>
 
     <!-- Research Projects Section -->
     <section id="projects" class="section">
-      <h2>Research Projects</h2>
+      <div class="section-header">
+        <h2 class="section-title">Research Projects</h2>
+        <p class="section-desc">Open-source computational implementations, benchmarks, and preprints</p>
+      </div>
 
       <!-- Project 1: Astrophysical S-Factor -->
       <article class="project-card">
-        <h3>1. Physics-Constrained Surrogates for Astrophysical S-Factors &amp; MACS</h3>
-        <div class="project-meta">
-          <span class="project-tag">Scientific ML</span>
-          <span class="project-tag">Gaussian Processes</span>
-          <span class="project-tag">Nuclear Astrophysics</span>
-          <span class="project-tag">IAEA EXFOR Benchmarks</span>
+        <div class="project-header">
+          <div class="project-badge-row">
+            <span class="project-pill">Scientific ML</span>
+            <span class="project-pill">Gaussian Process Surrogates</span>
+            <span class="project-pill">IAEA EXFOR Database</span>
+            <span class="project-pill">Thermonuclear Capture</span>
+          </div>
+          <h3 class="project-title">1. Physics-Constrained Surrogates for Astrophysical S-Factors &amp; MACS</h3>
         </div>
-        <p>
-          In stellar burning regimes, charged-particle radiative capture cross sections \(\sigma(E)\) drop exponentially as energy approaches the thermal Gamow window (\(E \sim 10 - 300\text{ keV}\)) due to Coulomb barrier quantum tunneling:
-        </p>
-        <div class="math-box">
-          $$\sigma(E) = \frac{1}{E} S(E) \exp(-2\pi\eta), \quad \eta(E) = 0.15748 \, Z_1 Z_2 \sqrt{\frac{\mu \text{ (amu)}}{E \text{ (MeV)}}}$$
-        </div>
-        <p>
-          Direct beam measurements in the sub-Coulomb regime yield cross sections in the picobarn range (\(10^{-12}\text{ b}\)), making direct laboratory detection susceptible to cosmic-ray background noise. This project implements non-linear surrogate models for the astrophysical \(S\)-factor:
-        </p>
-        <ul>
-          <li><strong>Zero-Energy Extrapolation \(S(0)\):</strong> Formulated Gaussian Process Regression (GPR) with Matérn-5/2 kernels and Physics-Informed MLPs to perform smooth zero-energy extrapolations while providing \(95\%\) Bayesian credible error envelopes.</li>
-          <li><strong>Curated Benchmark Dataset:</strong> Standardized and harmonized 17 benchmark radiative capture channels from IAEA EXFOR and JINA REACLIB databases, including \(^{7}\text{Be}(p, \gamma)^{8}\text{B}\), \(^{15}\text{N}(p, \gamma)^{16}\text{O}\), \(^{3}\text{He}(\alpha, \gamma)^{7}\text{Be}\), and \(^{12}\text{C}(p, \gamma)^{13}\text{N}\).</li>
-          <li><strong>Maxwellian-Averaged Cross Section (MACS):</strong> Numerically integrated extrapolated \(S\)-factors across thermal Maxwell-Boltzmann distributions to determine reaction rates \(\langle \sigma v \rangle\) across stellar temperatures \(T_9 = 0.01 - 10\).</li>
-        </ul>
-        <div class="figure-container">
-          <img src="assets/ML_S_Factor_Predictions_Publication.png" alt="Astrophysical S-Factor Predictions Plot" class="research-fig">
-          <p class="figure-caption"><strong>Figure 1:</strong> Non-linear machine learning surrogate predictions and experimental validations across low-energy capture channels, demonstrating smooth Gamow window extrapolation without unphysical high-energy divergence.</p>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/jamshaidal/astrophysical-sfactor-macs-ml" target="_blank" rel="noopener">&rarr; GitHub Repository</a>
-          <a href="https://github.com/jamshaidal/astrophysical-sfactor-macs-ml/raw/main/technical_report.pdf" target="_blank" rel="noopener">&rarr; Technical Report (PDF)</a>
+        <div class="project-body">
+          <p>
+            In stellar burning environments, nuclear capture cross sections \(\sigma(E)\) drop exponentially as energy falls into the thermal Gamow window (\(E \sim 10 - 300\text{ keV}\)) due to Coulomb barrier quantum tunneling:
+          </p>
+          <div class="math-box">
+            $$\sigma(E) = \frac{1}{E} S(E) \exp(-2\pi\eta), \quad \eta(E) = 0.15748 \, Z_1 Z_2 \sqrt{\frac{\mu \text{ (amu)}}{E \text{ (MeV)}}}$$
+          </div>
+          <p>
+            Because direct beam measurements in this energy regime yield cross sections in the picobarn range (\(10^{-12}\text{ b}\)), direct measurements are strongly masked by cosmic-ray background noise. This project builds a scientific machine learning framework resolving low-energy extrapolations:
+          </p>
+          <ul>
+            <li><strong>Zero-Energy Extrapolation \(S(0)\):</strong> Formulated Mat&eacute;rn-5/2 Gaussian Process Regression (GPR) and physics-constrained MLPs to extrapolate \(S(0)\) and higher-order derivatives \(S'(0), S''(0)\) while delivering \(95\%\) Bayesian credible error bands.</li>
+            <li><strong>Multi-Reaction Benchmark Matrix:</strong> Standardized and harmonized 17 experimental radiative capture channels from IAEA EXFOR and JINA REACLIB databases, including \(^{7}\text{Be}(p, \gamma)^{8}\text{B}\), \(^{15}\text{N}(p, \gamma)^{16}\text{O}\), \(^{3}\text{He}(\alpha, \gamma)^{7}\text{Be}\), and \(^{12}\text{C}(p, \gamma)^{13}\text{N}\).</li>
+            <li><strong>Maxwellian-Averaged Cross Sections (MACS):</strong> Integrated extrapolated \(S\)-factors across thermal Maxwell-Boltzmann distributions to calculate stellar reaction rates \(\langle \sigma v \rangle\) across temperatures \(T_9 = 0.01 - 10\).</li>
+          </ul>
+          <div class="figure-container">
+            <img src="assets/ML_S_Factor_Predictions_Publication.png" alt="Astrophysical S-Factor Predictions Plot" class="research-fig">
+            <p class="figure-caption"><strong>Figure 1:</strong> Non-linear machine learning surrogate predictions and experimental validations across low-energy capture channels, showing smooth Gamow window extrapolation without unphysical high-energy divergence.</p>
+          </div>
+          <div class="project-action-row">
+            <a href="https://github.com/jamshaidal/astrophysical-sfactor-macs-ml" target="_blank" rel="noopener" class="action-btn action-btn-primary">&rarr; GitHub Repository</a>
+            <a href="https://github.com/jamshaidal/astrophysical-sfactor-macs-ml/raw/main/technical_report.pdf" target="_blank" rel="noopener" class="action-btn action-btn-secondary">&darr; Technical Report (PDF)</a>
+          </div>
         </div>
       </article>
 
       <!-- Project 2: Quantum Neural Networks -->
       <article class="project-card">
-        <h3>2. Quantum Neural Networks vs. Classical Baselines for Nuclear Angular Scattering</h3>
-        <div class="project-meta">
-          <span class="project-tag">Quantum ML</span>
-          <span class="project-tag">Parameterized Quantum Circuits</span>
-          <span class="project-tag">Physical Review C Benchmark</span>
-          <span class="project-tag">Scattering Kinematics</span>
+        <div class="project-header">
+          <div class="project-badge-row">
+            <span class="project-pill">Quantum ML</span>
+            <span class="project-pill">Parameterized Quantum Circuits</span>
+            <span class="project-pill">Physical Review C 114 Benchmark</span>
+            <span class="project-pill">Scattering Kinematics</span>
+          </div>
+          <h3 class="project-title">2. Quantum Neural Networks vs. Classical Baselines for Nuclear Scattering</h3>
         </div>
-        <p>
-          Nuclear angular differential cross sections exhibit steep forward Coulomb diffraction peaks transitioning into rapid quantum interference oscillations at backward angles. This project explores the inductive bias and representational expressivity of Parameterized Quantum Circuits (PQCs) versus classical deep neural architectures:
-        </p>
-        <div class="math-box">
-          $$R(\theta_{\text{c.m.}}) = \frac{\frac{d\sigma}{d\Omega}(\theta_{\text{c.m.}})}{\left(\frac{d\sigma}{d\Omega}\right)_R(\theta_{\text{c.m.}})}, \quad \left(\frac{d\sigma}{d\Omega}\right)_R = \left( \frac{Z_1 Z_2 e^2}{4 E_{\text{c.m.}} \sin^2(\theta_{\text{c.m.}} / 2)} \right)^2$$
-        </div>
-        <p>
-          Surrogates were evaluated against coupled-channel Gamow Shell Model (GSM-CC) calculations published in <em>Physical Review C 114, 024306 (2026)</em> for \(^{13}\text{O}(p, p)\) and \(^{14}\text{O}(p, p)\) scattering:
-        </p>
-        <ul>
-          <li><strong>Hamiltonian &amp; Core Space:</strong> Inert core of \(^{8}\text{C}\) (\(Z=6, N=2\), decay width \(\Gamma = 130\text{ keV}\)) interacting via Woods-Saxon potentials with spin-orbit coupling (\(a = 0.65\text{ fm}, R_0 = 3.0\text{ fm}, V_{\text{so}} = 8.5\text{ MeV}\)).</li>
-          <li><strong>Quantum Inductive Bias:</strong> While classical deep MLPs suffer from spectral bias when fitting high-frequency interference oscillations, a 6-qubit variational circuit using kinematic angle-embedding registers and periodic CNOT entangling ladders fits backward interference minima (\(\theta_{\text{c.m.}} \approx 70^\circ - 90^\circ\)) with \(\chi^2/\text{d.o.f.} = 1.04\) using only 48 variational parameters.</li>
-          <li><strong>Parameter Efficiency:</strong> Outperformed classical multi-layer perceptrons containing over \(10^4\) parameters, demonstrating quantum parameter compactness on physical oscillatory features.</li>
-        </ul>
-        <div class="figure-container">
-          <img src="assets/Classical_vs_Quantum_Differential_Cross_Section.png" alt="Classical vs Quantum Differential Cross Section Benchmark" class="research-fig">
-          <p class="figure-caption"><strong>Figure 2:</strong> Comparative angular differential cross-section predictions benchmarked against GSM-CC theory, showing Parameterized Quantum Circuit resolution of destructive interference fringes.</p>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/jamshaidal/quantum-cross-section-qnn" target="_blank" rel="noopener">&rarr; GitHub Repository</a>
-          <a href="https://github.com/jamshaidal/quantum-cross-section-qnn/raw/main/technical_report.pdf" target="_blank" rel="noopener">&rarr; Technical Report (PDF)</a>
+        <div class="project-body">
+          <p>
+            Nuclear angular differential cross sections exhibit steep forward Coulomb diffraction peaks transitioning into rapid quantum interference oscillations at backward angles. This project analyzes the inductive bias and representational expressivity of Parameterized Quantum Circuits (PQCs) versus classical deep neural architectures:
+          </p>
+          <div class="math-box">
+            $$R(\theta_{\text{c.m.}}) = \frac{\frac{d\sigma}{d\Omega}(\theta_{\text{c.m.}})}{\left(\frac{d\sigma}{d\Omega}\right)_R(\theta_{\text{c.m.}})}, \quad \left(\frac{d\sigma}{d\Omega}\right)_R = \left( \frac{Z_1 Z_2 e^2}{4 E_{\text{c.m.}} \sin^2(\theta_{\text{c.m.}} / 2)} \right)^2$$
+          </div>
+          <p>
+            Surrogates were evaluated against state-of-the-art coupled-channel Gamow Shell Model (GSM-CC) calculations published in <em>Physical Review C 114, 024306 (2026)</em> for \(^{13}\text{O}(p, p)\) and \(^{14}\text{O}(p, p)\) elastic scattering:
+          </p>
+          <ul>
+            <li><strong>Hamiltonian &amp; Core Space:</strong> Inert core of \(^{8}\text{C}\) (\(Z=6, N=2\), decay width \(\Gamma = 130\text{ keV}\)) interacting via Woods-Saxon potentials with spin-orbit coupling (\(a = 0.65\text{ fm}, R_0 = 3.0\text{ fm}, V_{\text{so}} = 8.5\text{ MeV}\)).</li>
+            <li><strong>Quantum Inductive Bias:</strong> While classical deep MLPs suffer from spectral bias when fitting high-frequency interference oscillations, a 6-qubit variational circuit using kinematic angle-embedding registers and periodic CNOT entangling ladders fits backward interference minima (\(\theta_{\text{c.m.}} \approx 70^\circ - 90^\circ\)) with \(\chi^2/\text{d.o.f.} = 1.04\) using only 48 variational parameters.</li>
+            <li><strong>Extreme Parameter Efficiency:</strong> Outperformed classical multi-layer perceptrons containing over \(10^4\) parameters, demonstrating quantum parameter compactness on physical oscillatory features.</li>
+          </ul>
+          <div class="figure-container">
+            <img src="assets/Classical_vs_Quantum_Differential_Cross_Section.png" alt="Classical vs Quantum Differential Cross Section Benchmark" class="research-fig">
+            <p class="figure-caption"><strong>Figure 2:</strong> Comparative angular differential cross-section predictions benchmarked against GSM-CC theory, showing Parameterized Quantum Circuit resolution of destructive interference fringes.</p>
+          </div>
+          <div class="project-action-row">
+            <a href="https://github.com/jamshaidal/quantum-cross-section-qnn" target="_blank" rel="noopener" class="action-btn action-btn-primary">&rarr; GitHub Repository</a>
+            <a href="https://github.com/jamshaidal/quantum-cross-section-qnn/raw/main/technical_report.pdf" target="_blank" rel="noopener" class="action-btn action-btn-secondary">&darr; Technical Report (PDF)</a>
+          </div>
         </div>
       </article>
 
       <!-- Project 3: PINN Framework -->
       <article class="project-card">
-        <h3>3. Modular Physics-Informed Neural Network (PINN) Framework</h3>
-        <div class="project-meta">
-          <span class="project-tag">SciML</span>
-          <span class="project-tag">PyTorch</span>
-          <span class="project-tag">Partial Differential Equations</span>
-          <span class="project-tag">Automatic Differentiation</span>
-        </div>
-        <p>
-          Standard deep learning architectures approximate functions purely from observed data. In contrast, Physics-Informed Neural Networks embed governing differential operators directly into the objective function via PyTorch automatic differentiation (`autograd`):
-        </p>
-        <div class="math-box">
-          $$\mathcal{L}_{\text{total}} = \mathcal{L}_{\text{data}} + \lambda_{\text{pde}} \mathcal{L}_{\text{pde}} + \lambda_{\text{bc}} \mathcal{L}_{\text{bc}} + \lambda_{\text{ic}} \mathcal{L}_{\text{ic}}$$
-        </div>
-        <p>
-          Key features of this framework:
-        </p>
-        <ul>
-          <li><strong>Random Fourier Features (RFF):</strong> Implemented coordinate embedding via random Fourier projections to mitigate spectral bias and enable faster convergence on high-frequency gradient regimes.</li>
-          <li><strong>1D Viscous Burgers' Equation:</strong> Validated non-linear advection-diffusion shock formation \(u_t + u u_x - (0.01/\pi) u_{xx} = 0\) with zero boundary constraints, achieving relative \(L_2\) error \(< 5.1 \times 10^{-4}\).</li>
-          <li><strong>Damped Harmonic Oscillator:</strong> Enforced second-order ODE residuals \(m \ddot{x} + \mu \dot{x} + k x = 0\) with exact analytical boundary matching.</li>
-          <li><strong>Automated Test Pipeline:</strong> Validated higher-order derivative calculations via automated unit tests in continuous integration.</li>
-        </ul>
-        <div class="dual-fig-grid">
-          <div class="figure-container">
-            <img src="assets/pinn_burgers_solution.png" alt="PINN Burgers Solution" class="research-fig">
-            <p class="figure-caption"><strong>Figure 3a:</strong> PINN spatio-temporal solution \(u(x, t)\) of the 1D Viscous Burgers' equation.</p>
+        <div class="project-header">
+          <div class="project-badge-row">
+            <span class="project-pill">SciML Framework</span>
+            <span class="project-pill">PyTorch Autograd</span>
+            <span class="project-pill">Differential Equations</span>
+            <span class="project-pill">Fourier Embeddings</span>
           </div>
-          <div class="figure-container">
-            <img src="assets/pinn_harmonic_oscillator.png" alt="PINN Harmonic Oscillator" class="research-fig">
-            <p class="figure-caption"><strong>Figure 3b:</strong> Exact versus PINN predicted trajectory for damped harmonic oscillation.</p>
-          </div>
+          <h3 class="project-title">3. Modular Physics-Informed Neural Network (PINN) Framework</h3>
         </div>
-        <div class="project-links">
-          <a href="https://github.com/jamshaidal/physics-informed-ml-framework" target="_blank" rel="noopener">&rarr; GitHub Repository</a>
+        <div class="project-body">
+          <p>
+            Standard deep learning models act as black-box approximators. In contrast, Physics-Informed Neural Networks embed governing differential operators directly into the objective function via PyTorch automatic differentiation (`autograd`):
+          </p>
+          <div class="math-box">
+            $$\mathcal{L}_{\text{total}} = \mathcal{L}_{\text{data}} + \lambda_{\text{pde}} \mathcal{L}_{\text{pde}} + \lambda_{\text{bc}} \mathcal{L}_{\text{bc}} + \lambda_{\text{ic}} \mathcal{L}_{\text{ic}}$$
+          </div>
+          <p>
+            Key components of this modular framework:
+          </p>
+          <ul>
+            <li><strong>Random Fourier Features (RFF):</strong> Implemented coordinate embedding via random Fourier projections to mitigate spectral bias and accelerate convergence on steep gradient wavefronts.</li>
+            <li><strong>1D Viscous Burgers' Equation:</strong> Validated non-linear advection-diffusion shock formation \(u_t + u u_x - (0.01/\pi) u_{xx} = 0\) with zero Dirichlet boundary constraints, achieving relative \(L_2\) error \(< 5.1 \times 10^{-4}\).</li>
+            <li><strong>Damped Harmonic Oscillator:</strong> Enforced second-order ODE residuals \(m \ddot{x} + \mu \dot{x} + k x = 0\) with exact analytical boundary matching.</li>
+            <li><strong>Automated Test Pipeline:</strong> Validated higher-order derivative calculations via automated unit tests in continuous integration.</li>
+          </ul>
+          <div class="dual-fig-grid">
+            <div class="figure-container">
+              <img src="assets/pinn_burgers_solution.png" alt="PINN Burgers Solution" class="research-fig">
+              <p class="figure-caption"><strong>Figure 3a:</strong> PINN spatio-temporal solution \(u(x, t)\) of the 1D Viscous Burgers' equation.</p>
+            </div>
+            <div class="figure-container">
+              <img src="assets/pinn_harmonic_oscillator.png" alt="PINN Harmonic Oscillator" class="research-fig">
+              <p class="figure-caption"><strong>Figure 3b:</strong> Exact versus PINN predicted trajectory for damped harmonic oscillation.</p>
+            </div>
+          </div>
+          <div class="project-action-row">
+            <a href="https://github.com/jamshaidal/physics-informed-ml-framework" target="_blank" rel="noopener" class="action-btn action-btn-primary">&rarr; GitHub Repository</a>
+          </div>
         </div>
       </article>
 
       <!-- Project 4: Literature Mining & Hamiltonian Extraction -->
       <article class="project-card">
-        <h3>4. Automated Scientific Literature Mining &amp; Hamiltonian Matrix Extraction</h3>
-        <div class="project-meta">
-          <span class="project-tag">Data Engineering</span>
-          <span class="project-tag">Nuclear Shell Model</span>
-          <span class="project-tag">FAIR Data</span>
-          <span class="project-tag">Hamiltonian Elements</span>
+        <div class="project-header">
+          <div class="project-badge-row">
+            <span class="project-pill">Data Engineering</span>
+            <span class="project-pill">Nuclear Shell Model</span>
+            <span class="project-pill">FAIR Principles</span>
+            <span class="project-pill">Interaction Matrices</span>
+          </div>
+          <h3 class="project-title">4. Automated Scientific Literature Mining &amp; Hamiltonian Matrix Extraction</h3>
         </div>
-        <p>
-          Ab initio nuclear structure calculations depend heavily on two-body and three-body Hamiltonian matrix elements (e.g., YL3N and GSM-CC formulations). Much of this foundational data remains locked in unstructured archival PDF tables across several decades of literature.
-        </p>
-        <p>
-          I engineered automated extraction and validation pipelines to systematically harvest, parse, and verify published matrix elements:
-        </p>
-        <ul>
-          <li><strong>Automated Verification:</strong> Implemented programmatic validation of particle-exchange antisymmetry, matrix hermiticity, and spectroscopic level consistency.</li>
-          <li><strong>Structured Open Datasets:</strong> Exported validated interaction parameters into tidy tabular formats (.csv, .json) adhering to FAIR (Findable, Accessible, Interoperable, Reusable) open-science principles.</li>
-        </ul>
-        <div class="figure-container">
-          <img src="assets/YL3N_Quantum_Hamiltonians_Publication.png" alt="YL3N Quantum Hamiltonians Distribution" class="research-fig">
-          <p class="figure-caption"><strong>Figure 4:</strong> Extracted matrix element distributions and two-body interaction spectra compiled from published literature tables.</p>
+        <div class="project-body">
+          <p>
+            Ab initio nuclear structure calculations depend heavily on two-body and three-body Hamiltonian matrix elements (such as YL3N and GSM-CC formulations). Much of this foundational data remains locked in unstructured archival PDF tables across several decades of literature.
+          </p>
+          <p>
+            I engineered automated extraction and validation pipelines to systematically harvest, parse, and verify published matrix elements:
+          </p>
+          <ul>
+            <li><strong>Automated Verification:</strong> Implemented programmatic validation of particle-exchange antisymmetry, matrix hermiticity, and spectroscopic level consistency.</li>
+            <li><strong>Structured Open Datasets:</strong> Exported validated interaction parameters into tidy tabular formats (.csv, .json) adhering to FAIR (Findable, Accessible, Interoperable, Reusable) open-science principles.</li>
+          </ul>
+          <div class="figure-container">
+            <img src="assets/YL3N_Quantum_Hamiltonians_Publication.png" alt="YL3N Quantum Hamiltonians Distribution" class="research-fig">
+            <p class="figure-caption"><strong>Figure 4:</strong> Extracted matrix element distributions and two-body interaction spectra compiled from published literature tables.</p>
+          </div>
         </div>
       </article>
     </section>
 
     <!-- Personal Achievements Section -->
     <section id="achievements" class="section">
-      <h2>Personal Achievements &amp; Research Highlights</h2>
-      <p>
-        A summary of tangible computational research milestones, reproducibility standards, and benchmark accomplishments:
-      </p>
+      <div class="section-header">
+        <h2 class="section-title">Personal Achievements &amp; Research Highlights</h2>
+        <p class="section-desc">Quantifiable computational milestones, reproducibility standards, and benchmark metrics</p>
+      </div>
 
-      <table class="achievement-table">
-        <thead>
-          <tr>
-            <th style="width: 28%;">Domain / Objective</th>
-            <th style="width: 24%;">Key Metric / Output</th>
-            <th>Impact &amp; Methodological Rigor</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Automated Verification &amp; Reproducibility</strong></td>
-            <td><span class="metric-pill">100% Pass Rate</span></td>
-            <td>Engineered automated test suites (`verify_all_results.py`) across all repositories, verifying dataset checksums, mathematical invariants (Sommerfeld factor, Rutherford scattering kinematics), and plot artifacts.</td>
-          </tr>
-          <tr>
-            <td><strong>Quantum Parameter Efficiency</strong></td>
-            <td><span class="metric-pill">&chi;&sup2; / d.o.f. = 1.04</span></td>
-            <td>Demonstrated that a 48-parameter variational quantum circuit (PQC) resolves nuclear interference oscillations where classical deep networks requiring over \(10^4\) parameters suffer from high-frequency spectral bias.</td>
-          </tr>
-          <tr>
-            <td><strong>Publication-Ready Documentation</strong></td>
-            <td><span class="metric-pill">2 Technical Reports</span></td>
-            <td>Authored comprehensive, publication-formatted technical manuscripts (15+ pages, LaTeX/ReportLab) detailing derivations, ablation studies, and benchmarks for astrophysical S-factor and QNN scattering projects.</td>
-          </tr>
-          <tr>
-            <td><strong>Scientific Open-Source Standards</strong></td>
-            <td><span class="metric-pill">CI/CD &amp; CITATION.cff</span></td>
-            <td>Equipped all research repositories with GitHub Actions multi-platform CI pipelines (Ubuntu &amp; Windows, Python 3.10/3.11) and machine-readable Citation File Format (CFF v1.2.0) metadata.</td>
-          </tr>
-          <tr>
-            <td><strong>Thermonuclear Reaction Matrix</strong></td>
-            <td><span class="metric-pill">17 Capture Channels</span></td>
-            <td>Standardized and compiled a unified multi-reaction capture dataset from IAEA EXFOR and JINA REACLIB databases, enabling cross-reaction surrogate modeling and MACS integration.</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="card-table-wrap">
+        <table class="achievement-table">
+          <thead>
+            <tr>
+              <th style="width: 28%;">Domain / Objective</th>
+              <th style="width: 22%;">Key Metric / Output</th>
+              <th>Impact &amp; Methodological Rigor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Automated Verification &amp; Reproducibility</strong></td>
+              <td><span class="metric-pill">100% Pass Rate</span></td>
+              <td>Engineered automated test suites (`verify_all_results.py`) across all repositories, validating dataset checksums, mathematical invariants (Sommerfeld factor, Rutherford kinematics), and plot artifacts.</td>
+            </tr>
+            <tr>
+              <td><strong>Quantum Parameter Efficiency</strong></td>
+              <td><span class="metric-pill">&chi;&sup2; / d.o.f. = 1.04</span></td>
+              <td>Demonstrated that a 48-parameter variational quantum circuit resolves nuclear interference oscillations where classical deep networks requiring over \(10^4\) parameters suffer from high-frequency spectral bias.</td>
+            </tr>
+            <tr>
+              <td><strong>Publication-Ready Documentation</strong></td>
+              <td><span class="metric-pill">2 Technical Reports</span></td>
+              <td>Authored comprehensive, publication-formatted technical manuscripts (15+ pages each, LaTeX/ReportLab) detailing derivations, ablation studies, and benchmarks for astrophysical S-factor and QNN scattering projects.</td>
+            </tr>
+            <tr>
+              <td><strong>Scientific Open-Source Standards</strong></td>
+              <td><span class="metric-pill">CI/CD &amp; CITATION.cff</span></td>
+              <td>Equipped all research repositories with GitHub Actions multi-platform CI pipelines (Ubuntu &amp; Windows, Python 3.10/3.11) and machine-readable Citation File Format (CFF v1.2.0) metadata.</td>
+            </tr>
+            <tr>
+              <td><strong>Thermonuclear Reaction Matrix</strong></td>
+              <td><span class="metric-pill">17 Capture Channels</span></td>
+              <td>Standardized and compiled a unified multi-reaction capture dataset from IAEA EXFOR and JINA REACLIB databases, enabling cross-reaction surrogate modeling and MACS integration.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <!-- Technical Stack Section -->
     <section id="stack" class="section">
-      <h2>Technical &amp; Computational Stack</h2>
+      <div class="section-header">
+        <h2 class="section-title">Technical &amp; Computational Stack</h2>
+        <p class="section-desc">Core languages, machine learning frameworks, and physical computing libraries</p>
+      </div>
       <div class="stack-grid">
-        <div class="stack-category">
+        <div class="stack-box">
           <h4>Scientific Machine Learning &amp; AI</h4>
           <p>PyTorch, Scikit-Learn, Physics-Informed Neural Networks (PINNs), Random Fourier Features, Automatic Differentiation, Gradient-Boosted Trees.</p>
         </div>
-        <div class="stack-category">
+        <div class="stack-box">
           <h4>Quantum Computing &amp; Surrogates</h4>
           <p>Parameterized Quantum Circuits (PQCs), Angle-Embedding Registers, Variational Quantum Optimization, Pauli Observable Measurements.</p>
         </div>
-        <div class="stack-category">
+        <div class="stack-box">
           <h4>Scientific Computing &amp; Modeling</h4>
-          <p>NumPy, SciPy (numerical quadrature &amp; ODE solvers), Pandas, Gaussian Process Regression (Matérn-5/2 kernels, Bayesian confidence intervals).</p>
+          <p>NumPy, SciPy (numerical quadrature &amp; ODE solvers), Pandas, Gaussian Process Regression (Mat&eacute;rn-5/2 kernels, Bayesian confidence intervals).</p>
         </div>
-        <div class="stack-category">
+        <div class="stack-box">
           <h4>Software Engineering &amp; Publishing</h4>
           <p>Git, GitHub Actions (CI/CD testing), Linux/Bash, LaTeX, Matplotlib (Physical Review typography standards), Citation File Format (CFF).</p>
         </div>
       </div>
     </section>
 
-    <!-- Contact & Inquiries Section -->
+    <!-- Contact Section -->
     <section id="contact" class="section">
-      <h2>Contact &amp; Academic Inquiries</h2>
-      <p>
-        I welcome discussions regarding prospective Graduate Research Assistantships (RA), Ph.D./M.S. research positions, computational physics data challenges, or scientific machine learning collaborations:
-      </p>
-      <div class="contact-box">
-        <p><strong>Email:</strong> <a href="mailto:jamshaid8081@gmail.com">jamshaid8081@gmail.com</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/jamshaidal" target="_blank" rel="noopener">github.com/jamshaidal</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/muhammad-jamshaid-ali-1687082a0/" target="_blank" rel="noopener">linkedin.com/in/muhammad-jamshaid-ali-1687082a0</a></p>
+      <div class="section-header">
+        <h2 class="section-title">Contact &amp; Academic Inquiries</h2>
+        <p class="section-desc">Prospective graduate studies, research assistantships, and computational collaborations</p>
+      </div>
+      <div class="contact-card">
+        <p>
+          I welcome inquiries regarding prospective Graduate Research Assistantships (RA), Ph.D./M.S. research positions, computational physics data challenges, or scientific machine learning collaborations:
+        </p>
+        <div class="contact-options">
+          <a href="mailto:jamshaid8081@gmail.com" class="action-btn action-btn-primary">Email: jamshaid8081@gmail.com</a>
+          <a href="https://github.com/jamshaidal" target="_blank" rel="noopener" class="action-btn action-btn-secondary">GitHub: @jamshaidal</a>
+          <a href="https://www.linkedin.com/in/muhammad-jamshaid-ali-1687082a0/" target="_blank" rel="noopener" class="action-btn action-btn-secondary">LinkedIn Profile</a>
+        </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <p>&copy; Muhammad Jamshaid Ali &bull; Computational Physics &amp; Scientific Machine Learning</p>
-    </footer>
-  </div>
+  </main>
+
+  <!-- Academic Footer -->
+  <footer class="footer">
+    <p>&copy; Muhammad Jamshaid Ali &bull; Computational Physics &amp; Scientific Machine Learning</p>
+    <p style="margin-top: 4px; font-size: 12px; color: var(--text-subtle);">
+      All models and datasets benchmarked against peer-reviewed literature (Physical Review C 114, 024306; IAEA EXFOR).
+    </p>
+  </footer>
+
 </body>
 </html>
