@@ -839,7 +839,44 @@ body {
         </div>
       </article>
 
-      <!-- Project 4: Literature Mining & Hamiltonian Extraction -->
+      <!-- Project 4: Nuclear Graph Neural Network -->
+      <article class="project-card">
+        <div class="project-header">
+          <div class="project-badge-row">
+            <span class="project-pill">Geometric Deep Learning</span>
+            <span class="project-pill">Message Passing (MPNN)</span>
+            <span class="project-pill">AME2020 Atomic Mass Evaluation</span>
+            <span class="project-pill">Nuclear Many-Body Systems</span>
+          </div>
+          <h3 class="project-title">4. Nuclear Graph Neural Networks: Geometric Deep Learning on Isotope Topologies</h3>
+        </div>
+        <div class="project-body">
+          <p>
+            Atomic nuclei are strongly interacting quantum many-body systems. While macroscopic models like the Bethe-Weizs&auml;cker Liquid Drop Model (LDM) predict bulk saturation, they fail to resolve microscopic quantum shell closures near magic numbers (\(Z, N \in \{2, 8, 20, 28, 50, 82, 126\}\)).
+          </p>
+          <div class="math-box">
+            $$m_v^{(k)} = \sum_{u \in \mathcal{N}(v)} \text{MLP}_{\text{edge}}([h_u^{(k-1)} \parallel h_v^{(k-1)} \parallel \mathbf{e}_{uv}]), \quad y = \text{MLP}_{\text{readout}}\left(\sum_{v \in \mathcal{V}} h_v \parallel \frac{1}{|\mathcal{V}|} \sum_{v \in \mathcal{V}} h_v\right)$$
+          </div>
+          <p>
+            This project models each isotope as an undirected graph \(\mathcal{G} = (\mathcal{V}, \mathcal{E})\) where nodes represent harmonic oscillator shell states and edges model finite-range Yukawa meson exchange potentials:
+          </p>
+          <ul>
+            <li><strong>3.1x Error Reduction over Liquid Drop Theory:</strong> Evaluated across 94 experimental isotopes from the Atomic Mass Evaluation (AME2020), achieving \(R^2 = 0.9975\) and \(\text{MAE} = 0.0458\text{ MeV/nucleon}\) (compared to \(\text{MAE} = 0.1438\text{ MeV/A}\) for the classical liquid drop model).</li>
+            <li><strong>Microscopic Quantum Shell Closures:</strong> Accurately resolves elevated nuclear stability at doubly magic nuclei (\(^{4}\text{He}, ^{16}\text{O}, ^{40}\text{Ca}, ^{56}\text{Ni}, ^{208}\text{Pb}\)) where macroscopic formulas exhibit sharp residuals.</li>
+            <li><strong>Topological Permutation Invariance:</strong> Formulated using pure PyTorch message passing with dual-channel (sum and mean) graph pooling.</li>
+          </ul>
+          <div class="figure-container">
+            <img src="assets/nuclear_gnn_binding_energy_benchmark.png" alt="Nuclear GNN Binding Energy Benchmark" class="research-fig">
+            <p class="figure-caption"><strong>Figure 4:</strong> Nuclear binding energy per nucleon across mass number \(A\), demonstrating Nuclear MPNN resolution of quantum shell closures and comparison against the classical Liquid Drop Model.</p>
+          </div>
+          <div class="project-action-row">
+            <a href="https://github.com/jamshaidal/nuclear-graph-neural-network" target="_blank" rel="noopener" class="action-btn action-btn-primary">&rarr; GitHub Repository</a>
+            <a href="https://colab.research.google.com/github/jamshaidal/nuclear-graph-neural-network/blob/main/notebooks/nuclear_gnn_tutorial.ipynb" target="_blank" rel="noopener" class="action-btn action-btn-secondary">&#9658; Open in Colab</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 5: Literature Mining & Hamiltonian Extraction -->
       <article class="project-card">
         <div class="project-header">
           <div class="project-badge-row">
@@ -848,7 +885,7 @@ body {
             <span class="project-pill">FAIR Principles</span>
             <span class="project-pill">Interaction Matrices</span>
           </div>
-          <h3 class="project-title">4. Automated Scientific Literature Mining &amp; Hamiltonian Matrix Extraction</h3>
+          <h3 class="project-title">5. Automated Scientific Literature Mining &amp; Hamiltonian Matrix Extraction</h3>
         </div>
         <div class="project-body">
           <p>
@@ -863,7 +900,7 @@ body {
           </ul>
           <div class="figure-container">
             <img src="assets/YL3N_Quantum_Hamiltonians_Publication.png" alt="YL3N Quantum Hamiltonians Distribution" class="research-fig">
-            <p class="figure-caption"><strong>Figure 4:</strong> Extracted matrix element distributions and two-body interaction spectra compiled from published literature tables.</p>
+            <p class="figure-caption"><strong>Figure 5:</strong> Extracted matrix element distributions and two-body interaction spectra compiled from published literature tables.</p>
           </div>
         </div>
       </article>
